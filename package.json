@@ -1,0 +1,18 @@
+{
+  "name": "pagina-pulpastudios",
+  "version": "1.0.0",
+  "description": "Este es un proyecto donde realizo la pagina del emprendimiento de Pulpa Studio donde voy a intentar hacerle una pagina responsive",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemailer": "^6.9.16"
+  }
+}
