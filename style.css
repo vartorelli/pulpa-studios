@@ -1,8 +1,15 @@
 @font-face {
   font-family: "Andrea Canolli";
-  src: url("./fonts/AndreaCanolli01-rgzO9.ttf") format("truetype"); /* Ruta al archivo */
-  font-weight: normal; /* Cambia esto según las variantes de la fuente */
-  font-style: normal; /* Cambia esto si es cursiva, por ejemplo */
+  src: url("./fonts/AndreaCanolli01-rgzO9.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wix Madefor Display";
+  src: url("./fonts/WixMadeforDisplay[wght].woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }
 body {
@@ -91,7 +98,7 @@ body {
   width: fit-content;
 }
 .img-ini {
-  width: 100%; /* Asegura que las imágenes ocupen todo el espacio de la celda */
+  width: 100%;
   height: 400px;
 }
 /*Responsive Slider*/
@@ -198,10 +205,28 @@ body {
   width: 30px;
   cursor: auto;
 }
+.pause-btn {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  right: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.pause-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 /* Primer Slider */
 .frase img {
-  width: 30vw;
-  height: 400px;
+  width: 400px;
+  height: 300px;
   background-color: #ffa4bf;
   border-radius: 50%;
 }
@@ -249,7 +274,7 @@ body {
     gap: 10px;
   }
   .frase img {
-    height: 160px;
+    height: 120px;
     width: 160px;
   }
   .frase p {
@@ -273,14 +298,14 @@ body {
   color: white;
 }
 .list-service {
-  list-style: none; /* Elimina los puntos predeterminados */
+  list-style: none;
   padding: 0;
 }
 
 .list-service li {
   font-size: 20px;
   position: relative;
-  padding-left: 10px; /* Espacio para la imagen */
+  padding-left: 10px;
   margin: 15px auto;
 }
 .list-service li a {
@@ -302,33 +327,42 @@ body {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%); /* Centra verticalmente la imagen */
-  width: 30px; /* Ajusta el ancho de la imagen */
-  height: 30px; /* Ajusta la altura de la imagen */
-  background-image: url(assets/service-logo.png); /* Ruta de la imagen */
-  background-size: contain; /* Ajusta el tamaño dentro del cuadro */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-image: url(assets/service-logo.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 /* Acerca de nos */
-#sobrenos * {
-  min-width: 200px;
-  max-width: 700px;
-  margin: auto;
-  line-height: 40px;
-}
 #sobrenos {
-  display: flex;
-  flex-direction: column;
   background-color: #ffa424;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 20px;
 }
+
+#sobrenos .contenido {
+  max-width: 500px;
+}
+
 #sobrenos h2 {
   font-size: 44px;
   margin: 25px auto;
 }
+
 #sobrenos p {
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 20px;
+}
+
+.img-about {
+  height: 200px;
+  width: auto;
+  border-radius: 10px;
 }
 /* Integrantes */
 #integrantes h2 {
@@ -453,6 +487,9 @@ body {
   color: #fff;
 }
 @media screen and (max-width: 500px) {
+  .slider-btns {
+    display: none;
+  }
   .form {
     width: 90vw;
     margin: 15px auto;
@@ -462,11 +499,16 @@ body {
   .form textarea {
     width: 100%;
   }
+  .introduction {
+    display: flex;
+    flex-direction: column;
+  }
   .title {
     font-size: 44px;
   }
   .introduction img {
-    height: 44px;
+    margin-left: 5px;
+    height: 60px;
   }
 }
 #contacto h2 {
@@ -595,4 +637,82 @@ body {
 }
 .titulo {
   font-family: "Andrea Canolli";
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffa424;
+  padding: 5px;
+}
+.contact-instagram {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact h3 {
+  margin: 5px auto;
+  font-size: 16px;
+}
+.contact * {
+  color: white;
+}
+/*Logo de instagram*/
+.instagram {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background: -webkit-radial-gradient(
+      32% 106%,
+      circle cover,
+      rgb(255, 225, 125) 0%,
+      rgb(255, 205, 105) 10%,
+      rgb(250, 145, 55) 28%,
+      rgb(235, 65, 65) 42%,
+      transparent 82%
+    ),
+    -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.camera {
+  width: 14px;
+  height: 14px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.camera::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+}
+.camera::after {
+  content: "";
+  width: 1.8px;
+  height: 1.8px;
+  border-radius: 1.8px;
+  background: #fff;
+  position: absolute;
+  right: 1.5px;
+  top: 1.5px;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  background-color: rgb(48, 48, 48);
+}
+.footer p {
+  margin: 5px 10px;
 }

@@ -32,21 +32,19 @@ export default function contactFormValidation() {
   $form.addEventListener("submit", (event) => {
     const $overlay = document.querySelector(".modal-overlay"),
     $loader = d.querySelector(".contact-form-loader"),
-    $response = d.querySelector(".contact-form-response");
+    $response = d.querySelector(".contact-form-response"),
+    $btnSubmit = d.querySelector(".input-submit")
     event.preventDefault();
 
-    // Mostrar loader
     $loader.classList.add("modal-visible");
     $overlay.classList.add("modal-visible");
 
-    // Simular envío
     setTimeout(() => {
       $loader.classList.remove("modal-visible");
       $response.classList.add("modal-visible");
       $form.reset();
-    }, 3000); // Simula el tiempo de carga
+    }, 3000); 
 
-    // Ocultar respuesta después de 3 segundos
     setTimeout(() => {
       $response.classList.remove("modal-visible");
       $overlay.classList.remove("modal-visible");

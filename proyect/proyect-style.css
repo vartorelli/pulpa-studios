@@ -1,0 +1,298 @@
+@font-face {
+  font-family: "Wix Madefor Display";
+  src: url("../fonts/WixMadeforDisplay[wght].woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  margin: 0;
+  background-color: rgb(235, 162, 27);
+  font-family: "Wix Madefor Display";
+  text-align: center;
+  color: white;
+  font-display: swap;
+}
+video {
+  height: 80vh; 
+  width: auto;  
+  margin-bottom: 5px;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  margin: 15px;
+  font-size: 50px;
+  width: fit-content;
+}
+.logo-pulpa {
+  margin: 5px 5px 0px;
+  height: 80px;
+  width: 97px;
+}
+#home {
+  z-index: 10;
+  position: fixed;
+  top: 2vh;
+  right: 2vw;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(184, 92, 0);
+  border-radius: 8px;
+  padding: 5px;
+}
+.side-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent;
+  position: relative;
+}
+
+.side-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 1px 0px;
+  text-decoration: none;
+  color: aliceblue;
+  border: 2px solid antiquewhite;
+  border-bottom: none; /* Quitar borde inferior en todos */
+  padding: 10px 15px;
+  background-color: transparent;
+}
+.side-bar a:hover {
+  background-color: #d79300;
+}
+
+/* Estilo para el enlace activo */
+.side-bar a.active {
+  background-color: antiquewhite; /* Color del fondo de la sección */
+  font-weight: bold;
+  color: orange;
+  border-bottom: 2px solid antiquewhite; /* Simula la continuidad con el fondo */
+}
+
+/* Asegurar que la barra inferior sea continua */
+.side-bar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: antiquewhite;
+  z-index: -1; /* Mueve la línea detrás de los elementos */
+}
+.proyect {
+  background-color: antiquewhite;
+  color: orange;
+}
+.title-proyect {
+  margin: 0px auto 15px;
+  padding: 10px 0px 0px;
+}
+.proyect {
+  display: none;
+}
+.proyect.active {
+  display: block;
+}
+@media (max-width: 500px) {
+  .side-bar a {
+    padding: 8px 3px 2px;
+    font-size: 14px;
+  }
+  .title {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .logo-pulpa {
+    margin-top: 10px;
+    height: 60px;
+    width: 73px;
+  }
+  .proyect p {
+    margin: 0px 5px 5px;
+  }
+
+}
+
+.proyect-insta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.btn-insta {
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  color: white;
+  background-color: transparent;
+  margin: 10px;
+}
+.btn-insta:hover {
+  cursor: pointer;
+  background-color: #d79300;
+}
+.btn-close {
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 10px;
+  color: aliceblue;
+  background-color: #292929;
+}
+.insta {
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  height: fit-content;
+  top: 0;
+  left: 0;
+  display: inline;
+  background-color: #292929c5;
+  backdrop-filter: blur(5px);
+}
+.close {
+  display: none;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffa424;
+  padding: 5px;
+}
+.contact-instagram {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact h3 {
+  margin: 5px auto;
+  font-size: 16px;
+  height: fit-content;
+}
+.contact * {
+  color: white;
+}
+/* Gallery */
+.img-proyect {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  max-width: 800px;
+  margin: 0px 5px 15px;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+/*Logo de instagram*/
+.instagram {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background: -webkit-radial-gradient(
+      32% 106%,
+      circle cover,
+      rgb(255, 225, 125) 0%,
+      rgb(255, 205, 105) 10%,
+      rgb(250, 145, 55) 28%,
+      rgb(235, 65, 65) 42%,
+      transparent 82%
+    ),
+    -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.camera {
+  width: 14px;
+  height: 14px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.camera::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+}
+.camera::after {
+  content: "";
+  width: 1.8px;
+  height: 1.8px;
+  border-radius: 1.8px;
+  background: #fff;
+  position: absolute;
+  right: 1.5px;
+  top: 1.5px;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  background-color: rgb(48, 48, 48);
+}
+.footer p {
+  margin: 5px 10px;
+}
+@media (max-width: 640px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    max-width: 300px;
+    margin: 0px 5px 15px;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+}
+@media (min-width: 1200px) {
+  video {
+    height: 800px;
+  }
+}
+@media (max-width: 1200px) {
+  video {
+    height: 80vh;
+  }
+}

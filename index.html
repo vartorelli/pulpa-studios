@@ -7,25 +7,23 @@
       name="description"
       content="Pagina para Pulpa Studios, desarrolada por Facundo Vartorelli" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.cdnfonts.com/css/wix-madefor-display"
-      rel="stylesheet" />
-    <link rel="icon" href="assets/pulpa-studio-logo.png" type="image/x-icon" />
-    <title>Pulpa Studio</title>
+    <link rel="icon" href="assets/pulpa-studio-logo.webp" type="image/x-icon" />
+    <title>Pulpa Studios</title>
   </head>
   <body>
     <button class="nav-btn-open">Menú</button>
     <nav class="navegador-close">
       <a href="/index.html">Inicio</a>
       <a href="#sobrenos">Sobre nostros</a>
-      <a href="#integrantes">Quienes conforman Pulpa Studio</a>
+      <a href="#integrantes">Quienes conforman Pulpa Studios</a>
       <a href="#service">Nuestros servicios</a>
+      <a href="/proyect/index.html">Nuestros Proyectos</a>
       <a href="#contacto">Mensaje</a>
       <button class="nav-btn-close">Cerrar</button>
     </nav>
     <section class="introduction">
-      <img src="assets/pulpa-studio-logo.png" alt="logo-pulpa" />
-      <h1 class="title">PULPA STUDIO</h1>
+      <img src="assets/pulpa-studio-logo.webp" alt="logo-pulpa" />
+      <h1 class="title">PULPA STUDIOS</h1>
     </section>
     <div class="slider">
       <div class="slider-slides">
@@ -37,7 +35,9 @@
           <section class="frase">
             <img
               src="https://pulpastudio.my.canva.site/portfolio/media/b123e39d6e1c1590f07d9b71a8fba37e.png"
-              alt="Exprimiendo naranja" />
+              alt="Exprimiendo naranja"
+              height="120px"
+              width="160px" />
             <p>
               Exprimimos el potencial de tu marca con estrategias creativas y
               personalizadas.
@@ -65,18 +65,25 @@
       </ul>
     </div>
     <section id="sobrenos">
-      <h2 class="titulo">Acerca de Pulpa Studio</h2>
-      <p>
-        Somos una agencia de marketing que ayuda a empresas, marcas y
-        emprendimientos a crecer y posicionarse en el mundo digital.
-      </p>
-      <p>
-        Pulpa viene a traer la frescura que toda marca necesita para generar
-        impacto en su entorno.
-      </p>
+      <div class="contenido">
+        <h2 class="titulo">Acerca de Pulpa Studios</h2>
+        <p>
+          Somos una agencia de marketing que ayuda a empresas, marcas y
+          emprendimientos a crecer y posicionarse en el mundo digital.
+        </p>
+        <p>
+          Pulpa viene a traer la frescura que toda marca necesita para generar
+          impacto en su entorno.
+        </p>
+      </div>
+      <img
+        class="img-about"
+        src="assets/about-we.webp"
+        alt="Hombre con naranjas en los ojos"
+      />
     </section>
     <section id="integrantes">
-      <h2 class="titulo">Quienes conforman Pulpa Studio</h2>
+      <h2 class="titulo">Quienes conforman Pulpa Studios</h2>
       <div class="integrantes">
         <div class="card">
           <div class="card-img">
@@ -223,23 +230,38 @@
             data-pattern="^.{1,255}$"
             title="Tu comentario no debe exceder los 255 comentarios"
             required></textarea>
-          <br />
           <input type="submit" value="Enviar" />
           <div class="contact-form-loader">
-              <img src="Assets/loader.svg" alt="Cargando" />
-              <br />
-              <p>Cargando...</p>
+            <img src="Assets/loader.svg" alt="Cargando" />
+            <br />
+            <p>Cargando...</p>
           </div>
           <div class="contact-form-response">
-              <p>Los datos han sido enviados</p>
+            <p>Los datos han sido enviados</p>
           </div>
         </form>
       </div>
+      <footer>
+        <div class="contact">
+          <h3>📞 Telefono: <a href="tel: +54 3874 06-4810"> +54 3874 06-4810</a></h3>
+          <h3>✉️ Mail: <a href="mail: pulpastudios@gmail.com">pulpastudios@gmail.com</a></h3>
+          <h3 class="contact-instagram">
+            <div class="instagram">
+              <div class="camera"></div>
+            </div>
+            Instagram: &nbsp;
+            <a href="https://www.instagram.com/pulpa.studios/"
+              >@pulpa.studios</a
+            >
+          </h3>
+        </div>
+        <div class="footer">
+          <p>Pulpa Studios</p>
+          <p>Page created by Facundo Vartorelli. 2025</p>
+        </div>
+      </footer>
     </section>
   </body>
-  <style>
-    @import url("https://fonts.cdnfonts.com/css/wix-madefor-display");
-  </style>
   <script type="module" src="index.js"></script>
   <script type="module" src="event/form_submit.js"></script>
 </html>
