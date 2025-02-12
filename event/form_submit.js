@@ -11,7 +11,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   try {
-    const response = await fetch("http://0.0.0.0:10000/send-mail", {
+    const response = await fetch("/send-mail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
