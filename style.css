@@ -47,6 +47,7 @@ body {
   border-style: outset;
   border-width: 2px;
   border-color: white;
+  transition: all 1s ease-out;
 }
 .navegador button {
   font-size: 2vh;
@@ -69,6 +70,7 @@ body {
   border: none;
   cursor: pointer;
   font-family: cursive;
+  transition: all 1s ease-out;
 }
 .nav-btn-open:hover {
   background-color: rgb(207, 121, 29);
@@ -152,7 +154,7 @@ body {
   height: 100%;
   padding: 0px 15px 7px;
   text-decoration: none;
-  color: #000;
+  color: #000;  
   transition: all 0.3s ease;
   box-sizing: border-box;
 }
@@ -217,6 +219,7 @@ body {
   font-size: 14px;
   cursor: pointer;
   border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
 .pause-btn:hover {
@@ -489,6 +492,9 @@ body {
 @media screen and (max-width: 500px) {
   .slider-btns {
     display: none;
+  }
+  .pause-btn {
+    right: 10px;
   }
   .form {
     width: 90vw;
