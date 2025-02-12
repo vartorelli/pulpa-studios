@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = 10000;
+const port = process.env.PORT || 10000;
 
 // Middleware para CORS y JSON
 app.use(cors());
@@ -56,6 +56,6 @@ app.post("/send-mail", async (req, res) => {
 });
 
 // Iniciar el servidor
-app.listen(port, () => {
+app.listen(port,"0.0.0.0",() => {
   console.log(`Servidor funcionando en http://0.0.0.0:${port}`);
 });
