@@ -25,7 +25,7 @@ form.addEventListener("submit", async (e) => {
       alert("Correo enviado con éxito.");
     } else {
       console.error("Error al enviar el correo: ", result.error);
-      alert("Hubo un error al enviar el correo.");
+      alert("Hubo un error al enviar el correo.", result.error);
     }
   } catch (error) {
     console.error("Error de red: ", error);
