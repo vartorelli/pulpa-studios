@@ -36,7 +36,8 @@ body {
   border-radius: 10px;
 }
 .navegador * {
-  font-family: cursive;
+  font-family: inherit;
+  font-weight: bold;
   text-decoration: none;
   color: #ffa424;
   margin: 1vw;
@@ -69,7 +70,8 @@ body {
   background-color: rgb(255, 132, 0);
   border: none;
   cursor: pointer;
-  font-family: cursive;
+  font-family: inherit;
+  font-weight: bold;
   transition: all 1s ease-out;
 }
 .nav-btn-open:hover {
