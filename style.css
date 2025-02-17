@@ -31,12 +31,11 @@ h2 {
   position: fixed;
   right: 2vw;
   top: 2vh;
-  margin: 10px;
   padding: 15px;
   width: fit-content;
   font-size: 2vh;
   background-color: #4580b2;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 .navegador * {
   font-family: inherit;
@@ -51,7 +50,7 @@ h2 {
   border-style: outset;
   border-width: 2px;
   border-color: white;
-  transition: all 1s ease-out;
+  transition: all 0.3s ease-out;
 }
 .navegador button {
   font-size: 2vh;
