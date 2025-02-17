@@ -17,6 +17,9 @@ body {
   background-color: antiquewhite;
   font-family: "Wix Madefor Display", sans-serif;
 }
+h2 {
+  font-size: 44px;
+}
 /* Navegador */
 .navegador-close {
   display: none;
@@ -156,7 +159,7 @@ body {
   height: 100%;
   padding: 0px 15px 7px;
   text-decoration: none;
-  color: #000;  
+  color: #000;
   transition: all 0.3s ease;
   box-sizing: border-box;
 }
@@ -233,7 +236,7 @@ body {
   width: 400px;
   height: 300px;
   background-color: #ffa4bf;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 .frase {
   height: auto;
@@ -355,7 +358,6 @@ body {
 }
 
 #sobrenos h2 {
-  font-size: 44px;
   margin: 25px auto;
 }
 
@@ -371,8 +373,7 @@ body {
 }
 /* Integrantes */
 #integrantes h2 {
-  font-size: 44px;
-  margin: 30px;
+  margin: 25px;
 }
 .integrantes {
   display: flex;
@@ -441,56 +442,6 @@ body {
   background-color: #ff80009a;
   color: white;
 }
-/*Servicios*/
-.servicios {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-  margin: 20px auto;
-  color: #ffa424;
-}
-.servicios h2 {
-  text-align: center;
-  font-size: 44px;
-  margin-bottom: 0px;
-}
-.text-service li {
-  padding-left: 40px;
-}
-.text-service {
-  line-height: 35px;
-  font-size: 16px;
-  margin: 15px;
-}
-.text-service bold {
-  font-weight: bold;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: fit-content;
-  margin: 15px auto;
-}
-.form input[type="text"],
-.form input[type="email"],
-.form textarea {
-  width: 500px;
-  margin: 5px auto;
-  font-family: "Times New Roman", Times, serif;
-}
-.form textarea {
-  min-height: 80px;
-  resize: none;
-}
-.submit {
-  width: 60px;
-  margin: auto;
-  background-color: orange;
-  color: #fff;
-}
 @media screen and (max-width: 500px) {
   .slider-btns {
     display: none;
@@ -507,23 +458,29 @@ body {
   .form textarea {
     width: 100%;
   }
-  .introduction {
-    display: flex;
-    flex-direction: column;
-  }
-  .title {
-    font-size: 44px;
+  .introduction h1 {
+    display: none;
   }
   .introduction img {
     margin-left: 5px;
-    height: 60px;
+    height: 100px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+
+  #servicios h2 {
+    margin-top: 10px;
+  }
+  .list-service li {
+    font-size: 1rem;
+    line-height: 24px;
   }
 }
+/*Formulario contacto*/
 #contacto h2 {
-  font-size: 44px;
   margin: 20px auto 5px;
   text-align: center;
-  font-size: 34px;
   color: #ffa424;
 }
 .contact-form {
@@ -544,8 +501,10 @@ body {
 .contact-form textarea {
   resize: none;
 }
-.contact-form input,
+.contact-form input[type="text"],
+.contact-form input[type="email"],
 .contact-form textarea {
+  color: #ffa424;
   font-size: 1rem;
   font-family: "Wix Madefor Display", sans-serif;
   font-weight: bold;
@@ -554,8 +513,25 @@ body {
 .contact-form textarea::placeholder {
   font-weight: bold;
   font-family: "Wix Madefor Display", sans-serif;
+  color: #ffa424;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+  background-color: #fbe4c8 !important;
+  color: #ffa424 !important;
+  -webkit-text-fill-color: #ffa424 !important;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: 0 0 0px 1000px #fbe4c8 inset !important;
+  caret-color: #e88a32;
+}
+input[type="text"],
+input[type="email"] {
+  color: #ffa424 !important;
 }
 .contact-form input[type="submit"] {
+  font-family: "Wix Madefor Display", sans-serif;
+  font-size: 1rem;
   width: 50%;
   font-weight: bold;
   cursor: pointer;
@@ -723,4 +699,57 @@ body {
 }
 .footer p {
   margin: 5px 10px;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  padding-bottom: 10px;
+  background-color: white;
+  color: #ffa424;
+}
+.cards-service {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  max-width: 80vw;
+  min-width: 320px;
+  gap: 3vw;
+}
+.card-service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  padding: 5px;
+  color: #ffa424;
+  border: 1px solid #ffa424;
+  border-radius: 10px;
+  background-color: #ffffff;
+  height: fit-content;
+}
+.img-service {
+  margin: auto;
+  width: 60%;
+  height: 60%;
+  border-radius: 20px;
+}
+.description-service{
+  text-align: center;
+}
+.description-service bold {
+  font-weight: bold;
+}
+@media (max-width:600px) {
+  .cards-service {
+    min-width: 95vw;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .description-service{
+    font-size: 12px;
+  }
 }

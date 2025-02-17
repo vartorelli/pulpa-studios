@@ -31,9 +31,9 @@ export default function contactFormValidation() {
   });
   $form.addEventListener("submit", (event) => {
     const $overlay = document.querySelector(".modal-overlay"),
-    $loader = d.querySelector(".contact-form-loader"),
-    $response = d.querySelector(".contact-form-response"),
-    $btnSubmit = d.querySelector(".input-submit")
+      $loader = d.querySelector(".contact-form-loader"),
+      $response = d.querySelector(".contact-form-response"),
+      $btnSubmit = d.querySelector(".input-submit");
     event.preventDefault();
 
     $loader.classList.add("modal-visible");
@@ -43,11 +43,34 @@ export default function contactFormValidation() {
       $loader.classList.remove("modal-visible");
       $response.classList.add("modal-visible");
       $form.reset();
-    }, 3000); 
+    }, 3000);
 
     setTimeout(() => {
       $response.classList.remove("modal-visible");
       $overlay.classList.remove("modal-visible");
     }, 5000);
   });
+  $inputs.forEach((input, index) => {
+    input.addEventListener("change", () => moveToNextInput(index));
+
+    input.addEventListener("input", (e) => {
+      if (e.target.matches(":-webkit-autofill")) {
+        moveToNextInput(index);
+      }
+    });
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        moveToNextInput(index);
+      }
+    });
+  });
+
+  function moveToNextInput(index) {
+    const nextInput = $inputs[index + 1];
+    if (nextInput) {
+      nextInput.focus();
+    }
+  }
 }
